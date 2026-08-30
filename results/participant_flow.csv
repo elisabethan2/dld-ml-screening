@@ -1,0 +1,9 @@
+stage,label,n
+assessed,original study,83
+excluded,HI: Hearing loss not bilateral sensorineural,3
+excluded,DLD: Danish not the child's first language,1
+excluded,Control: DPOAE refer in one or both ears; hearing impairment could not be ruled out,4
+analysed,present analyses,75
+group,Developmental language disorder,27
+group,Hearing impairment,16
+group,Typically developing controls,32

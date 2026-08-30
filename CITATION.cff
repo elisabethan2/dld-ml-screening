@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+title: >-
+  Machine-Learning Screening of Developmental Language Disorder in a Context with
+  Limited Standardized Language Assessments: Evidence from Danish Children —
+  analysis code
+message: "If you use this software, please cite both the software and the paper."
+type: software
+authors:
+  - given-names: "Annette"
+    family-names: "Esbensen"
+    orcid: "https://orcid.org/0000-0002-4472-4487"
+    affiliation: "Department of Culture and Language, University of Southern Denmark, Odense, Denmark"
+  - given-names: "Elisabeth Muth"
+    family-names: "Andersen"
+    orcid: "https://orcid.org/0000-0003-2844-0617"
+    email: "elan@sdu.dk"
+    affiliation: "Department of Culture and Language, University of Southern Denmark, Odense, Denmark"
+  - given-names: "Giovanna"
+    family-names: "Morini"
+    orcid: "https://orcid.org/0000-0002-0034-8213"
+    affiliation: "Department of Culture and Language, University of Southern Denmark, Odense, Denmark"
+repository-code: "https://github.com/elisabethan2/dld-ml-screening"
+license: MIT
+version: "1.0.0"
+date-released: "TODO"                 # date of the archived release
+doi: "TODO"                           # Zenodo concept DOI (the all-versions one)
+keywords:
+  - developmental language disorder
+  - machine learning
+  - screening
+  - clinical prediction model
+  - TRIPOD+AI
+  - Danish
+abstract: >-
+  Analysis code, aggregate results and documentation for a model-development study
+  of an interpretable machine-learning screener for developmental language disorder
+  in Danish children. The individual-level data are not distributed; see
+  data/README.md.
+preferred-citation:
+  type: article
+  title: >-
+    Machine-Learning Screening of Developmental Language Disorder in a Context with
+    Limited Standardized Language Assessments: Evidence from Danish Children
+  authors:
+    - given-names: "Annette"
+      family-names: "Esbensen"
+      orcid: "https://orcid.org/0000-0002-4472-4487"
+    - given-names: "Elisabeth Muth"
+      family-names: "Andersen"
+      orcid: "https://orcid.org/0000-0003-2844-0617"
+    - given-names: "Giovanna"
+      family-names: "Morini"
+      orcid: "https://orcid.org/0000-0002-0034-8213"
+  journal: "Journal of Speech, Language, and Hearing Research"
+  year: 2026
+  doi: "TODO"                         # article DOI, once published

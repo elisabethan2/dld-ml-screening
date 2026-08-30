@@ -1,0 +1,87 @@
+{
+  "run_datetime": "2026-08-22 09:58:56",
+  "seed": 42,
+  "data_file": "data/phddataset_samlet_300626.xlsx",
+  "data_sha256_16": "7aaf1d0e1375d9b8",
+  "n_total": 59,
+  "n_DLD": 27,
+  "n_Control": 32,
+  "features": [
+    "LSPHUK",
+    "LTaF",
+    "TROGB",
+    "LSPLRAE",
+    "GåStop",
+    "verbfluantal",
+    "verbfluskift",
+    "HimOpmscore_skala",
+    "NonLRAE",
+    "LTaB",
+    "NIQ",
+    "verbflusubkat",
+    "OOU",
+    "verbfluintru",
+    "verbflupers"
+  ],
+  "age_field": "Alder_mdr/12",
+  "cv": "RepeatedStratifiedKFold 5x20",
+  "lasso": {
+    "penalty": "l1",
+    "C_grid": [
+      0.01,
+      0.0215,
+      0.0464,
+      0.1,
+      0.2154,
+      0.4642,
+      1.0,
+      2.1544,
+      4.6416,
+      10.0
+    ],
+    "chosen_C": 0.1,
+    "class_weight": "balanced"
+  },
+  "rf": {
+    "n_estimators": 500,
+    "class_weight": "balanced"
+  },
+  "performance": [
+    {
+      "model": "LASSO (primary, nested C)",
+      "BalAcc": 0.885,
+      "BalAcc_lo": 0.698,
+      "BalAcc_hi": 1.0,
+      "AUC": 0.969,
+      "AUC_lo": 0.845,
+      "AUC_hi": 1.0
+    },
+    {
+      "model": "Random Forest (robustness)",
+      "BalAcc": 0.89,
+      "BalAcc_lo": 0.733,
+      "BalAcc_hi": 1.0,
+      "AUC": 0.963,
+      "AUC_lo": 0.833,
+      "AUC_hi": 1.0
+    }
+  ],
+  "minimal_battery_AUC": {
+    "k1": 0.945,
+    "k2": 0.974,
+    "full": 0.975
+  },
+  "environment": {
+    "python": "3.13.13",
+    "sklearn": "1.9.0",
+    "pandas": "3.0.5",
+    "numpy": "2.5.2",
+    "shap": "0.52.0"
+  },
+  "compute": {
+    "platform": "Linux-6.12.0-211.40.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 256,
+    "note": "scikit-learn CPU (no GPU used)"
+  }
+}

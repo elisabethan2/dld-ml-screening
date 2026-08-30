@@ -1,0 +1,8 @@
+metric,value
+n,16.0
+agreement_n,12.0
+agreement_pct,75.0
+clinDLD_modelDLD,4.0
+clinDLD_modelCtrl,2.0
+clinCtrl_modelDLD,2.0
+clinCtrl_modelCtrl,8.0

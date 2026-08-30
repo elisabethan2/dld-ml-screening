@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------- sensitive participant data
+# Nothing from data/ is ever committed except the access documentation.
+data/*
+!data/README.md
+
+# Individual-level exports from the exploratory HI analyses (one row per child).
+explore/hi_scores.csv
+explore/hi_attributions_long.csv
+explore/hi_probe_scores.csv
+explore/hi_individual/
+
+# Any stray spreadsheet anywhere in the tree.
+*.xlsx
+*.xls
+
+# ---------------------------------------------------------------- python noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---------------------------------------------------------------- aggregate outputs we DO track
+# The broad rules above must not swallow the committed aggregate result tables.
+!results/*.csv
+!explore/hi_correlations.csv
+!explore/hi_dissociation_corr.csv
+!explore/hi_agreement.csv

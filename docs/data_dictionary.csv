@@ -1,0 +1,135 @@
+dataset_column,paper_figure_label,figure1_name,codebook_name,construct,instrument,type,definition_docs,assumed_definition,units,n_present,pct_missing,analysis_role,notes
+ID,,,ID,Identifier,-,id,Informant number (H/S/K + number),,-,75,0.0,identifier,83 numbered -> 75 in data (8 excluded)
+Gruppe,,,Gruppe,Group,-,label,"0=HI,1=SLI/DLD,2=Control",,-,75,0.0,target,Coded SLI; paper uses DLD
+Køn,,,Køn,Demographic,-,demographic,"1=boy,2=girl",,-,75,0.0,covariate,
+Fødselsdato,,,Fødselsdato,Demographic,-,date,Date of birth,,-,75,0.0,source,
+Alder,,,Alder,Demographic,-,demographic,Age år;mdr (year;month),,years;months,75,0.0,do-not-average,Use Alder_mdr for decimal age
+Aldersgruppe,,,Aldersgruppe,Demographic,-,demographic,Age band 1=7y..6=12y,,-,75,0.0,covariate,
+BEHL,,,(new; not in codebook),Hearing level,Audiometry (unaided),clinical,Best Ear Hearing Level (degree of hearing loss),,dB,16,78.7,HI-descriptor,NEW; HI group only; describe HI severity
+DLD-like from the PhD,,,(new; not in codebook),Clinical judgment,PhD,label,"1=DLD-like, 2=not DLD-like (clinical impression)",,-,16,78.7,HI-validation,NEW; HI only; model-vs-clinical 13/16 agree
+Alder_mdr,Age,,Alder_mdr,Demographic,derived,demographic,Age in months (decimal age = /12),,months,75,0.0,covariate,Age covariate uses Alder_mdr/12
+NIQ,Nonverbal IQ (Block Design),NIQ,NIQ,Nonverbal reasoning,WISC-IV,raw_score,Block Design raw score,,points,70,6.7,primary-feature,DLD ~1 SD below; ranks low
+TaF,,TaF,TaF,Verbal STM,WISC-IV,raw_score,"Forward digit span, points",,points,74,1.3,not-used,span (LTaF) used instead
+LTaF,Digit span forward,LTaF,LTaF,Verbal STM,WISC-IV,span_score,"Forward digit span, longest span",,items,74,1.3,primary-feature,TOP feature
+TaF_samletscore,,,TaF_samletscore,Verbal STM,WISC-IV,composite,Timing-based composite,,-,74,1.3,not-used,
+TaB,,TaB,TaB,Verbal WM,WISC-IV,raw_score,"Backward digit span, points",,points,74,1.3,not-used,span used instead
+LTaB,Digit span backward,LTaB,LTaB,Verbal WM,WISC-IV,span_score,"Backward digit span, longest span",,items,74,1.3,primary-feature,
+TaB_samletscore,,,TaB_samletscore,Verbal WM,WISC-IV,composite,Timing composite,,-,70,6.7,not-used,
+OOU,Odd-One-Out,OOU,OOU,Visuospatial WM,Odd-One-Out,span_score,"Odd-One-Out, longest span",,items,74,1.3,primary-feature,
+OOUperception,,OOU perception,OOUperception,Visual perception,Odd-One-Out,subscore,"Perception, % correct",,%,74,1.3,not-used,Ceiling; dropped
+OOUhuk,,OOU huk,OOUhuk,Visuospatial WM,Odd-One-Out,subscore,"Memory, % correct",,%,74,1.3,not-used,
+OOU_samletscore,,,OOU_samletscore,Visuospatial WM,Odd-One-Out,composite,Timing composite,,-,74,1.3,not-used,
+LSPSEM,,LSP SEM,LSP SEM,Comprehension,CLPT,subscore,Semantic accuracy,,%,74,1.3,not-used,
+LSPHUK,CLPT word recall,LSP HUK,LSP HUK,Verbal WM (storage),CLPT,raw_score,Word recall accuracy,,%,74,1.3,primary-feature,Top predictor; bounded proportion
+LSPLRAE,CLPT span,LSP LRAE,LSP LRAE,Verbal WM,CLPT,span_score,"Listening span, longest span",,items,74,1.3,primary-feature,
+LSP_samletscore,,,LSP_samletscore,Verbal WM,CLPT,composite,Timing composite,,-,67,10.7,not-used,
+NonLRAE,Nonword recall,Nono LRAE,Nono LRAE,Phonological STM,Serial Repetition of Nonwords,span_score,"Nonword recall, longest span",,items,74,1.3,primary-feature,Replaces Non; importance #12->#9
+Non,,Non,Non,Phonological STM,Serial Repetition of Nonwords,raw_score,"Nonword recall, points",,points,74,1.3,not-used,Superseded by NonLRAE
+NonLRAE_samletscore,,,NonLRAE_samletscore,Phonological STM,Serial Repetition of Nonwords,composite,Timing composite,,-,65,13.3,not-used,
+GåStop,Go/Stop inhibition,Gå Stop,Gå Stop,Response inhibition,TEA-Ch,raw_score,Go/Stop inhibition,,-,74,1.3,primary-feature,Higher = better (response inhibition)
+Himmålobjekt,,Him målobjekt,Him målobjekt,Selective attention,TEA-Ch,raw_score,Targets found,,targets,75,0.0,not-used,
+THim,,T Him,T Him,Attention/speed,TEA-Ch,raw_score,Time per target,,s,75,0.0,not-used,Raw HimOpmscore ~ this (r=0.99)
+HimOpmscore,,Him opmscore,Him opmscore,Selective attention,TEA-Ch,raw_score,Time-based attention score,higher=WORSE (~time per target),-,75,0.0,not-used,Superseded by HimOpmscore_skala; outliers
+HimOpmscore_skala,Sky Search attention,,Him opmscore_skala,Selective attention,TEA-Ch,standardized_external,Standard score from test-manual norms,,standard score,75,0.0,primary-feature,higher=better; DLD lowest (7.5); no outliers
+TROGB,Grammar (TROG-2),TROG B,TROG B,Grammar comprehension,TROG-2,raw_score,Correct blocks,,blocks,75,0.0,primary-feature,
+TROGgen,,TROG gen,TROG gen,Grammar (process),TROG-2,raw_score,Repetitions,,-,75,0.0,not-used,
+TROGlekfejl,,TROG lek fejl,TROG lek fejl,Grammar (process),TROG-2,raw_score,Lexical errors,,-,75,0.0,not-used,
+TROGsysfejl,,TROG sys fejl,TROG sys fejl,Grammar (process),TROG-2,raw_score,Systematic errors,,-,75,0.0,not-used,
+TROG_A,,,TROG_A,Grammar comprehension,TROG-2,trog_block,"Block A (1=pass,0=fail)",,binary,75,0.0,Set3-only,20 blocks; dropped as feature set
+TROG_B,,,TROG_B,Grammar comprehension,TROG-2,trog_block,"Block B (1=pass,0=fail)",,binary,75,0.0,Set3-only,20 blocks; dropped as feature set
+TROG_C,,,TROG_C,Grammar comprehension,TROG-2,trog_block,"Block C (1=pass,0=fail)",,binary,75,0.0,Set3-only,20 blocks; dropped as feature set
+TROG_D,,,TROG_D,Grammar comprehension,TROG-2,trog_block,"Block D (1=pass,0=fail)",,binary,75,0.0,Set3-only,20 blocks; dropped as feature set
+TROG_E,,,TROG_E,Grammar comprehension,TROG-2,trog_block,"Block E (1=pass,0=fail)",,binary,75,0.0,Set3-only,20 blocks; dropped as feature set
+TROG_F,,,TROG_F,Grammar comprehension,TROG-2,trog_block,"Block F (1=pass,0=fail)",,binary,74,1.3,Set3-only,20 blocks; dropped as feature set
+TROG_G,,,TROG_G,Grammar comprehension,TROG-2,trog_block,"Block G (1=pass,0=fail)",,binary,74,1.3,Set3-only,20 blocks; dropped as feature set
+TROG_H,,,TROG_H,Grammar comprehension,TROG-2,trog_block,"Block H (1=pass,0=fail)",,binary,74,1.3,Set3-only,20 blocks; dropped as feature set
+TROG_I,,,TROG_I,Grammar comprehension,TROG-2,trog_block,"Block I (1=pass,0=fail)",,binary,74,1.3,Set3-only,20 blocks; dropped as feature set
+TROG_J,,,TROG_J,Grammar comprehension,TROG-2,trog_block,"Block J (1=pass,0=fail)",,binary,74,1.3,Set3-only,20 blocks; dropped as feature set
+TROG_K,,,TROG_K,Grammar comprehension,TROG-2,trog_block,"Block K (1=pass,0=fail)",,binary,72,4.0,Set3-only,20 blocks; dropped as feature set
+TROG_L,,,TROG_L,Grammar comprehension,TROG-2,trog_block,"Block L (1=pass,0=fail)",,binary,72,4.0,Set3-only,20 blocks; dropped as feature set
+TROG_M,,,TROG_M,Grammar comprehension,TROG-2,trog_block,"Block M (1=pass,0=fail)",,binary,72,4.0,Set3-only,20 blocks; dropped as feature set
+TROG_N,,,TROG_N,Grammar comprehension,TROG-2,trog_block,"Block N (1=pass,0=fail)",,binary,70,6.7,Set3-only,20 blocks; dropped as feature set
+TROG_O,,,TROG_O,Grammar comprehension,TROG-2,trog_block,"Block O (1=pass,0=fail)",,binary,70,6.7,Set3-only,20 blocks; dropped as feature set
+TROG_P,,,TROG_P,Grammar comprehension,TROG-2,trog_block,"Block P (1=pass,0=fail)",,binary,69,8.0,Set3-only,20 blocks; dropped as feature set
+TROG_Q,,,TROG_Q,Grammar comprehension,TROG-2,trog_block,"Block Q (1=pass,0=fail)",,binary,66,12.0,Set3-only,20 blocks; dropped as feature set
+TROG_R,,,TROG_R,Grammar comprehension,TROG-2,trog_block,"Block R (1=pass,0=fail)",,binary,66,12.0,Set3-only,20 blocks; dropped as feature set
+TROG_S,,,TROG_S,Grammar comprehension,TROG-2,trog_block,"Block S (1=pass,0=fail)",,binary,63,16.0,Set3-only,20 blocks; dropped as feature set
+TROG_T,,,TROG_T,Grammar comprehension,TROG-2,trog_block,"Block T (1=pass,0=fail)",,binary,61,18.7,Set3-only,20 blocks; dropped as feature set
+verbfluantal,Verbal fluency: correct,Verb flu antal,Verb flu antal,Semantic fluency,SVFT,raw_score,Correct responses,,items,75,0.0,primary-feature,
+verbflupers,Verbal fluency: persev.,Verb flu pers,Verb flu pers,Executive (fluency),SVFT,raw_score,Perseverations,,-,75,0.0,primary-feature,ns across groups
+verbfluintru,Verbal fluency: intrusions,Verb flu intru,Verb flu intru,Executive (fluency),SVFT,raw_score,Intrusions,,-,75,0.0,primary-feature,ns across groups
+verbflusubkat,Verbal fluency: subcat.,Verb flu subkat,Verb flu subkat,Semantic organization,SVFT,raw_score,Subcategories,,-,75,0.0,primary-feature,
+verbflucluster,,Verb flu cluster,Verb flu cluster,Semantic organization,SVFT,raw_score,Mean cluster size,,-,75,0.0,not-used,No scaled version
+verbfluskift,Verbal fluency: switches,Verb flu skift,Verb flu skift,Executive search,SVFT,raw_score,Switches,,-,75,0.0,primary-feature,
+NIQ_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,70,6.7,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+LTaF_skala( z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+LTaB_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+CLPTwordrecall_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+CLPTspan_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+Nonwords_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+Gåstop_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+TROG_skala (z-score),,,(not in codebook),Standardized (sample),TROG-2,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+verbfluantal_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+verbflupers_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+verbfluintru_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+verbsubkat_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+verbskift_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+OOU_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,74,1.3,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+him_opm_skala (z-score),,,(not in codebook),Standardized (sample),-,standardized_sample,,"Sample-based z-score (mean 10, SD 3, whole sample)",-,75,0.0,not-used,= raw rescaled (r=1.0); leakage risk; standardize within CV instead
+18,,,5-15 item 18,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+19,,,5-15 item 19,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+20,,,5-15 item 20,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+21,,,5-15 item 21,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+22,,,5-15 item 22,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+23,,,5-15 item 23,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+24,,,5-15 item 24,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+25,,,5-15 item 25,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+26,,,5-15 item 26,Attention/concentration,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+27,,,5-15 item 27,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+28,,,5-15 item 28,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+29,,,5-15 item 29,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+30,,,5-15 item 30,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+31,,,5-15 item 31,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+32,,,5-15 item 32,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+33,,,5-15 item 33,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+34,,,5-15 item 34,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+35,,,5-15 item 35,Hyperactivity/impulsivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+36,,,5-15 item 36,Passivity/inactivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+37,,,5-15 item 37,Passivity/inactivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+38,,,5-15 item 38,Passivity/inactivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+39,,,5-15 item 39,Passivity/inactivity,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+40,,,5-15 item 40,Planning/organization,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+41,,,5-15 item 41,Planning/organization,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+42,,,5-15 item 42,Planning/organization,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+61,,,5-15 item 61,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+62,,,5-15 item 62,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+63,,,5-15 item 63,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+64,,,5-15 item 64,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,40,46.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+65,,,5-15 item 65,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+66,,,5-15 item 66,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+67,,,5-15 item 67,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+68,,,5-15 item 68,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+69,,,5-15 item 69,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+70,,,5-15 item 70,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+71,,,5-15 item 71,Memory,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+72,,,5-15 item 72,Language comprehension,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+73,,,5-15 item 73,Language comprehension,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+74,,,5-15 item 74,Language comprehension,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+75,,,5-15 item 75,Language comprehension,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+76,,,5-15 item 76,Language comprehension,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+77,,,5-15 item 77,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+78,,,5-15 item 78,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+79,,,5-15 item 79,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+80,,,5-15 item 80,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+81,,,5-15 item 81,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+82,,,5-15 item 82,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+83,,,5-15 item 83,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+84,,,5-15 item 84,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,42,44.0,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+85,,,5-15 item 85,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,40,46.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+86,,,5-15 item 86,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+87,,,5-15 item 87,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+88,,,5-15 item 88,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+89,,,5-15 item 89,Speech,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+90,,,5-15 item 90,Verbal communication,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+91,,,5-15 item 91,Verbal communication,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R
+92,,,5-15 item 92,Verbal communication,5-15R,questionnaire,"Parent-report item (0=passer godt,1=til en vis grad,2=passer ikke)",,0-2,43,42.7,cannot-be-DLDvsCon-feature,DLD+HI ONLY (no controls) -> group-confounded; describe only; coding reversed vs standard 5-15R

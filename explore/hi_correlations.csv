@@ -1,0 +1,14 @@
+analysis,variable,r,p,n,kind
+(1) model_prob vs questionnaire,Attention,0.117,0.667,16,INDEPENDENT
+(1) model_prob vs questionnaire,Hyperactivity,0.422,0.104,16,INDEPENDENT
+(1) model_prob vs questionnaire,Passivity,-0.18,0.505,16,INDEPENDENT
+(1) model_prob vs questionnaire,Planning,-0.084,0.758,16,INDEPENDENT
+(1) model_prob vs questionnaire,Memory,0.063,0.815,16,INDEPENDENT
+(1) model_prob vs questionnaire,Comprehension,0.516,0.041,16,INDEPENDENT
+(1) model_prob vs questionnaire,Speech,0.496,0.051,16,INDEPENDENT
+(1) model_prob vs questionnaire,Communication,0.455,0.076,16,INDEPENDENT
+(1) model_prob vs questionnaire,Language,0.65,0.006,16,INDEPENDENT
+(1) model_prob vs questionnaire,Total,0.297,0.264,16,INDEPENDENT
+(2a) model_prob vs BEHL,BEHL,0.106,0.696,16,INDEPENDENT
+(2b) model_prob vs age-at-amplification,age_first_aid_years,-0.268,0.315,16,INDEPENDENT
+(4) clinical label vs questionnaire,Language,0.772,0.0,16,label (indep. instruments)

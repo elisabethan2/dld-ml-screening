@@ -1,0 +1,17 @@
+feature,label,LASSO_coef,RF_SHAP,Perm_imp,abs_coef
+LTaF,Digit span forward,-0.7543060745459973,0.1224446985799464,0.005806327160493826,0.7543060745459973
+LSPHUK,CLPT word recall,-0.24935514968984432,0.10201897685471653,0.004456018518518523,0.24935514968984432
+TROGB,Grammatical comprehension (TROG-2),-0.1487695054940747,0.05464097106242015,0.0,0.1487695054940747
+LSPLRAE,CLPT listening span,0.0,0.04228534784217635,0.0,0.0
+GåStop,Response inhibition (Go/Stop),0.0,0.030531136420168182,0.0,0.0
+verbfluskift,Verbal fluency: switches,0.0,0.02893331452127114,0.0,0.0
+verbfluantal,Verbal fluency: correct,0.0,0.026169170426808074,0.0,0.0
+LTaB,Digit span backward,0.0,0.025448107837276444,0.0,0.0
+NonLRAE,Nonword serial recall,0.0,0.020680041487642412,0.0,0.0
+age,Age,0.0,0.01599687592027386,0.0,0.0
+NIQ,Nonverbal reasoning (Block Design),0.0,0.01267779215259311,0.0,0.0
+OOU,Visuospatial WM (Odd-One-Out),0.0,0.007648308386100663,0.0,0.0
+verbflusubkat,Verbal fluency: subcat.,0.0,0.007250832622559148,0.0,0.0
+HimOpmscore_skala,Selective attention (Sky Search),0.0,0.007193446531200305,0.0,0.0
+verbflupers,Verbal fluency: persev.,0.0,0.0019022516832129708,0.0,0.0
+verbfluintru,Verbal fluency: intrusions,0.0,0.0016370193654455672,0.0,0.0

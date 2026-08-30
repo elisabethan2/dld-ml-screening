@@ -1,0 +1,177 @@
+{
+  "model": "L1-regularized (LASSO) logistic regression",
+  "outcome": "P(DLD) — 1 = DLD, 0 = typically developing control",
+  "fitted_on": {
+    "n": 59,
+    "n_DLD": 27,
+    "n_control": 32,
+    "data_file": "data/phddataset_samlet_300626.xlsx",
+    "data_sha256_16": "7aaf1d0e1375d9b8"
+  },
+  "hyperparameters": {
+    "penalty": "l1",
+    "solver": "liblinear",
+    "C": 0.1,
+    "class_weight": "balanced",
+    "seed": 42
+  },
+  "preprocessing": "median imputation, then standardization (both fitted on the training sample)",
+  "decision_threshold": 0.5,
+  "intercept": 0.0,
+  "predictors": [
+    {
+      "feature": "LSPHUK",
+      "label": "CLPT word recall",
+      "impute_median": 0.625,
+      "standardize_mean": 0.570049,
+      "standardize_sd": 0.235143,
+      "coefficient": -0.249355,
+      "retained": true
+    },
+    {
+      "feature": "LTaF",
+      "label": "Digit span forward",
+      "impute_median": 4.0,
+      "standardize_mean": 4.59322,
+      "standardize_sd": 1.290364,
+      "coefficient": -0.754306,
+      "retained": true
+    },
+    {
+      "feature": "TROGB",
+      "label": "Grammar (TROG-2)",
+      "impute_median": 15.0,
+      "standardize_mean": 13.627119,
+      "standardize_sd": 4.743946,
+      "coefficient": -0.14877,
+      "retained": true
+    },
+    {
+      "feature": "LSPLRAE",
+      "label": "CLPT span",
+      "impute_median": 2.0,
+      "standardize_mean": 2.101695,
+      "standardize_sd": 1.24458,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "GåStop",
+      "label": "Go/Stop inhibition",
+      "impute_median": 14.0,
+      "standardize_mean": 12.084746,
+      "standardize_sd": 4.618636,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "verbfluantal",
+      "label": "Verbal fluency: correct",
+      "impute_median": 14.0,
+      "standardize_mean": 14.915254,
+      "standardize_sd": 5.958296,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "verbfluskift",
+      "label": "Verbal fluency: switches",
+      "impute_median": 19.0,
+      "standardize_mean": 20.152542,
+      "standardize_sd": 7.577428,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "HimOpmscore_skala",
+      "label": "Sky Search attention",
+      "impute_median": 9.0,
+      "standardize_mean": 9.135593,
+      "standardize_sd": 4.45869,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "NonLRAE",
+      "label": "Nonword recall (span)",
+      "impute_median": 3.0,
+      "standardize_mean": 2.983051,
+      "standardize_sd": 1.333932,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "LTaB",
+      "label": "Digit span backward",
+      "impute_median": 3.0,
+      "standardize_mean": 3.237288,
+      "standardize_sd": 1.476815,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "NIQ",
+      "label": "Nonverbal IQ (Block Design)",
+      "impute_median": 26.0,
+      "standardize_mean": 30.542373,
+      "standardize_sd": 15.013352,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "verbflusubkat",
+      "label": "Verbal fluency: subcat.",
+      "impute_median": 11.0,
+      "standardize_mean": 10.59322,
+      "standardize_sd": 3.532506,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "OOU",
+      "label": "Odd-One-Out",
+      "impute_median": 3.0,
+      "standardize_mean": 3.59322,
+      "standardize_sd": 1.851419,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "verbfluintru",
+      "label": "Verbal fluency: intrusions",
+      "impute_median": 0.0,
+      "standardize_mean": 0.372881,
+      "standardize_sd": 0.9187,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "verbflupers",
+      "label": "Verbal fluency: persev.",
+      "impute_median": 0.0,
+      "standardize_mean": 0.559322,
+      "standardize_sd": 0.849151,
+      "coefficient": 0.0,
+      "retained": false
+    },
+    {
+      "feature": "age",
+      "label": "Age (years)",
+      "impute_median": 9.666667,
+      "standardize_mean": 9.696328,
+      "standardize_sd": 1.54992,
+      "coefficient": 0.0,
+      "retained": false
+    }
+  ],
+  "validation": "internal only — repeated stratified 5-fold CV, 20 repeats; no external validation",
+  "intended_use": "research / model development. NOT validated for clinical decision-making.",
+  "exported": "2026-08-30 09:56:28",
+  "environment": {
+    "python": "3.13.13",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Linux-6.12.0-211.40.1.el10_2.x86_64-x86_64-with-glibc2.39"
+  }
+}

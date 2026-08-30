@@ -1,0 +1,21 @@
+# Pinned analysis environment for the DLD screening study.
+#
+# These are the exact versions used for the locked runs recorded in results/run_log.md
+# (Python 3.13.12). Results are deterministic under this environment and seed 42.
+# Random-forest and gradient-boosting values can shift slightly on other scikit-learn
+# versions, which is one reason the random forest serves only as a robustness check.
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# docs/environment_freeze.txt is the complete `pip freeze` of the original conda
+# environment, kept for the record; it is not directly installable elsewhere because
+# conda-built packages resolve to local build paths.
+
+numpy==2.4.3
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.10.9
+shap==0.52.0
+openpyxl==3.1.5

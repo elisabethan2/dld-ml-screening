@@ -1,0 +1,5 @@
+Classifier,BalAcc,BalAcc_lo,BalAcc_hi,AUC,AUC_lo,AUC_hi,F1_macro,F1_lo,F1_hi
+LASSO (L1-logistic),0.878,0.741,1.0,0.966,0.833,1.0,0.874,0.73,1.0
+Random Forest,0.892,0.733,1.0,0.963,0.833,1.0,0.89,0.73,1.0
+SVM (RBF),0.866,0.682,1.0,0.948,0.819,1.0,0.864,0.681,1.0
+Gradient Boosting,0.887,0.7,1.0,0.94,0.793,1.0,0.886,0.697,1.0

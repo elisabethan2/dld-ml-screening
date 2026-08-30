@@ -1,0 +1,17 @@
+feature,label,impute_median,standardize_mean,standardize_sd,coefficient,retained
+LSPHUK,CLPT word recall,0.625,0.570049,0.235143,-0.249355,True
+LTaF,Digit span forward,4.0,4.59322,1.290364,-0.754306,True
+TROGB,Grammar (TROG-2),15.0,13.627119,4.743946,-0.14877,True
+LSPLRAE,CLPT span,2.0,2.101695,1.24458,0.0,False
+GåStop,Go/Stop inhibition,14.0,12.084746,4.618636,0.0,False
+verbfluantal,Verbal fluency: correct,14.0,14.915254,5.958296,0.0,False
+verbfluskift,Verbal fluency: switches,19.0,20.152542,7.577428,0.0,False
+HimOpmscore_skala,Sky Search attention,9.0,9.135593,4.45869,0.0,False
+NonLRAE,Nonword recall (span),3.0,2.983051,1.333932,0.0,False
+LTaB,Digit span backward,3.0,3.237288,1.476815,0.0,False
+NIQ,Nonverbal IQ (Block Design),26.0,30.542373,15.013352,0.0,False
+verbflusubkat,Verbal fluency: subcat.,11.0,10.59322,3.532506,0.0,False
+OOU,Odd-One-Out,3.0,3.59322,1.851419,0.0,False
+verbfluintru,Verbal fluency: intrusions,0.0,0.372881,0.9187,0.0,False
+verbflupers,Verbal fluency: persev.,0.0,0.559322,0.849151,0.0,False
+age,Age (years),9.666667,9.696328,1.54992,0.0,False
